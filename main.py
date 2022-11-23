@@ -1,16 +1,26 @@
-# This is a sample Python script.
+"""
+Exercise "Test pycharm and github":
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+As always, read the whole exercise description carefully before your start to solve the exercise.
 
+Copy this file into your own solution directory. Edit your copy only.
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+Run the program with shift+f10 (or click on the green arrow)
 
+In the program code change the text between the quotation marks
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+Commit the file to your own git repository (commit means: back up the current state of your files as a new version)
+    Git, Commit (or click the green check mark)
+    write a meaningful comment
+    click on "commit and push" (push means: upload this commit to github)
+    push
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+Check in your web browser on github.com that the changed file is present in your repository on github
+
+Send your teacher the url of your github repository via Teams chat
+The url looks something like https://github.com/lichtgestalter/S1.git
+
+Thereafter go on with the next file.
+"""
+
+print("hiiiiiiiii!")
