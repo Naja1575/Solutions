@@ -1,97 +1,47 @@
 """
-Exercise "Tom the Turtle":
+Exercise "factorial":
 
-As always, read the whole exercise description carefully before your start to solve the exercise.
+As always, read the whole exercise description carefully before you begin to solve the exercise.
 
 Copy this file into your own solution directory. Write your solution into the copy.
 
-The function "demo" introduces you to all commands you need to interact with Tom in the following exercises.
+All you need to know about functions in order to solve this exercise, you'll find in the jupiter notebook S0014_basics.ipynb.
 
-Only if you are curious and love details:
-    Here is the full turtle graphics documentation:
-    https://docs.python.org/3.3/library/turtle.html
+Write a function named "factorial".
+Scroll down to find the place in this file, where to write the function in.
 
-Part 1:
-    Write a function "square" which accepts a parameter "length".
-    Calling this function causes the turtle to draw a square with a side length of "length" pixels.
+The function factorial shall ...
+    have one parameter named "number".
+    calculate the factorial of this parameter and store the result in a variable named result.
+        (If you do not remember the definition of factorial: https://da.wikipedia.org/wiki/Fakultet_(matematik) or https://en.wikipedia.org/wiki/Factorial)
+    return the result.
 
-Part 2:
-     Write a function "visible" which returns a boolean value,
-     indicating if the turtle is in the visible area of the screen.
-     Use this function in the following parts of this exercise
-     to return the turtle to the screen when it wandered off.
+In the main program...
+    Write a line of code saving the integer number 5 in a variable called factorial_input.
+    In the next line of code call the function factorial with factorial_input as its argument
+    and save the result of this function call in a variable named factorial_result.
+    In the next line of code print out "5! = 120" using the variables factorial_input and factorial_result.
 
-Part 3:
-    Write a function "many_squares" with a for loop, which calls square repeatedly.
-    Use this function to draw several squares of different sizes in different positions.
-    The function shall have some parameters. For example:
-        number: how many squares will be drawn?
-        size: how large are the squares?
-        distance: how far away from the last square is the next square positioned?
-
-Part 4:
-    Write a function that produces patterns similar to this:
-    https://pixabay.com/vectors/spiral-square-pattern-black-white-154465/
-
-Part 5:
-    Write a function that produces patterns similar to this:
-    https://www.101computing.net/2d-shapes-using-python-turtle/star-polygons/
-    The function shall have a parameter, that influences the shape of the pattern.
-
-Part 6:
-    Create your own function that produces a cool pattern.
-    Later, if you like, present your pattern on the big screen to the others.
+Run the program. "5! = 120" should be printed in the console.
+Change the first line of the main program to "factorial_input = 6".
+Run the program again.
+This time "6! = 720" should be printed in the console.
 
 When your program is complete, push it to your github repository.
 Then send this Teams message to your teacher: <filename> done
 Thereafter go on with the next file.
 """
 
+#  Write your function below this line.
+def factorial(number):
+    result = 1
+    for i in range(number):
+        result = result * (i + 1)
+    return result
+# Here starts the main program. From the main program you can call your functions.
 
-import turtle    # this imports a library called "turtle". A library is (someone else's) python code, that you can use in your own program.
+factorial_input = 6
 
+factorial_result = factorial(factorial_input)
 
-def demo():  # demonstration of basic turtle commands
-    tom = turtle.Turtle()  # create an object named tom of type Turtle
-    print(type(tom))
-    tom.speed(1)  # fastest: 10, slowest: 1
-    for x in range(8):
-        tom.forward(100)  # move 100 pixels
-        tom.left(45)  # turn 45 degrees left
-        print("Tom is now at", tom.position())
-    tom.penup()  # do not draw while moving
-    tom.forward(222)
-    tom.pendown()  # draw while moving
-    tom.pencolor("red")  # draw in red
-    tom.right(90)  # turn 90 degrees right
-    tom.forward(333)
-    tom.home()  # return to the original position in the middle of the window
-    turtle.done()  # keeps the turtle window open after the program is done
-
-def square(length):
-    one = turtle.Turtle()
-    print(type(one))
-    one.speed(2)
-    for x in range(4):
-        one.forward(length)
-        one.left(90)
-    one.home()
-    turtle.done()
-    visible(one)
-
-def visible(turtle):
-    hey = turtle.position()
-    print(hey)
-    if hey == (-300.00, 300.00):
-        print("false")
-    elif hey == (300.00, -300.00):
-        print("false")
-    elif hey == (300.00, 300.00):
-        print("false")
-    elif hey == (-300.00, -300.00):
-        print("false")
-    else:
-        print("true")
-
-
-square(100)
+print (f"{factorial_input}! = {factorial_result}")
