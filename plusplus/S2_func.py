@@ -18,5 +18,8 @@ def skill(bane, hold):
 def max_one(bane, date_):
     # return the bane's destination at a certain date in the booking table
     with Session(S2sql.engine) as session:
-        session.scalars(select(S2d.Booking).where(S2d.Booking.bane_id == bane.id).where(extract('day', S2d.Booking.date) == date_.day).where(extract('month', S2d.Booking.date) == date_.month).where(extract('year', S2d.Booking.date) == date_.year))
-    return len(session) > 0
+        records = session.scalars(select(S2d.Booking).where(S2d.Booking.bane_id == bane.id).where(extract('day', S2d.Booking.date) == date_.day).where(extract('month', S2d.Booking.date) == date_.month).where(extract('year', S2d.Booking.date) == date_.year))
+        counter = 0
+        for rec in records:
+            counter += 1
+    return counter == 0

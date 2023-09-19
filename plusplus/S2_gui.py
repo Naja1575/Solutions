@@ -150,7 +150,7 @@ def create_booking(tree, record):  # add new tuple to database
         else:
             messagebox.showwarning("", "Holdet er for stort til denne bane!")
     else:
-        messagebox.showwarning("", "Banen er allerede booked i dag!")
+        messagebox.showwarning("", "Banen er allerede booked den dag!")
 
 
 def update_booking(tree, record):  # add new tuple to database
@@ -169,7 +169,7 @@ def update_booking(tree, record):  # add new tuple to database
         else:
             messagebox.showwarning("", "Holdet er for stort til denne bane!")
     else:
-        messagebox.showwarning("", "Banen er allerede booked i dag!")
+        messagebox.showwarning("", "Banen er allerede booked den dag!")
 
 
 def delete_booking(tree, record):  # delete tuple in database
