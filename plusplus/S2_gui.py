@@ -235,9 +235,9 @@ tree_scroll_hold.config(command=tree_hold.yview)
 # Define the data table's formatting and content
 tree_hold['columns'] = ("id", "erfaring", "størrelse")  # Define columns
 tree_hold.column("#0", width=0, stretch=tk.NO)  # Format columns. Suppress the irritating first empty column.
-tree_hold.column("id", anchor=tk.E, width=40)  # "E" stands for East, meaning Right. Possible anchors are N, NE, E, SE, S, SW, W, NW and CENTER
-tree_hold.column("erfaring", anchor=tk.E, width=80)
-tree_hold.column("størrelse", anchor=tk.W, width=200)
+tree_hold.column("id", anchor=tk.CENTER, width=40)  # "E" stands for East, meaning Right. Possible anchors are N, NE, E, SE, S, SW, W, NW and CENTER
+tree_hold.column("erfaring", anchor=tk.CENTER, width=80)
+tree_hold.column("størrelse", anchor=tk.CENTER, width=200)
 tree_hold.heading("#0", text="", anchor=tk.W)  # Create column headings
 tree_hold.heading("id", text="Id", anchor=tk.CENTER)
 tree_hold.heading("erfaring", text="Erfaring", anchor=tk.CENTER)
@@ -300,9 +300,9 @@ tree_scroll_bane.config(command=tree_bane.yview)
 # Define the data table's formatting and content
 tree_bane['columns'] = ("id", "kapacitet", "sværhedsgrad")  # Define columns
 tree_bane.column("#0", width=0, stretch=tk.NO)  # Format columns. Suppress the irritating first empty column.
-tree_bane.column("id", anchor=tk.E, width=40)  # "E" stands for East, meaning Right. Possible anchors are N, NE, E, SE, S, SW, W, NW and CENTER
-tree_bane.column("kapacitet", anchor=tk.E, width=80)
-tree_bane.column("sværhedsgrad", anchor=tk.W, width=200)
+tree_bane.column("id", anchor=tk.CENTER, width=40)  # "E" stands for East, meaning Right. Possible anchors are N, NE, E, SE, S, SW, W, NW and CENTER
+tree_bane.column("kapacitet", anchor=tk.CENTER, width=80)
+tree_bane.column("sværhedsgrad", anchor=tk.CENTER, width=200)
 tree_bane.heading("#0", text="", anchor=tk.W)  # Create column headings
 tree_bane.heading("id", text="Id", anchor=tk.CENTER)
 tree_bane.heading("kapacitet", text="Kapacitet", anchor=tk.CENTER)
@@ -365,10 +365,10 @@ tree_scroll_booking.config(command=tree_booking.yview)
 # Define the data table's formatting and content
 tree_booking['columns'] = ("id", "date", "hold_id", "bane_id")  # Define columns
 tree_booking.column("#0", width=0, stretch=tk.NO)  # Format columns. Suppress the irritating first empty column.
-tree_booking.column("id", anchor=tk.E, width=40)  # "E" stands for East, meaning Right. Possible anchors are N, NE, E, SE, S, SW, W, NW and CENTER
-tree_booking.column("date", anchor=tk.E, width=100)
-tree_booking.column("hold_id", anchor=tk.W, width=80)
-tree_booking.column("bane_id", anchor=tk.W, width=80)
+tree_booking.column("id", anchor=tk.CENTER, width=40)  # "E" stands for East, meaning Right. Possible anchors are N, NE, E, SE, S, SW, W, NW and CENTER
+tree_booking.column("date", anchor=tk.CENTER, width=100)
+tree_booking.column("hold_id", anchor=tk.CENTER, width=80)
+tree_booking.column("bane_id", anchor=tk.CENTER, width=80)
 tree_booking.heading("#0", text="", anchor=tk.W)  # Create column headings
 tree_booking.heading("id", text="Id", anchor=tk.CENTER)
 tree_booking.heading("date", text="Date", anchor=tk.CENTER)
